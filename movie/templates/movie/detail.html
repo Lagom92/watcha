@@ -1,0 +1,19 @@
+{% extends 'movie/base.html' %}
+{% block bb %}
+
+    <h1> detail </h1>
+    <hr>
+    <h2> {{movie.title}}</h2>
+    <h2> {{movie.title_en}}</h2>
+    <h2> {{movie.audience}}</h2>
+    <h2> {{movie.open_date}}</h2>
+    <h2> {{movie.genre}}</h2>
+    <h2> {{movie.watch_grade}}</h2>
+    <h2> {{movie.score}}</h2>
+    <h2> {{movie.poster_url}}</h2>
+    <h2> {{movie.description}}</h2>
+    
+    <a href="{% url 'movies:form_update' movie.id %}">form 수정</a>
+    <a href="{% url 'movies:model_form_update' movie.id %}">model form 수정</a>
+
+{% endblock %}
